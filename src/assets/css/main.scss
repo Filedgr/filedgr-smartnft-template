@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "vars.scss";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px !important;
+  background-color: $bg-color;
+  color: $secondary-color;
+  font-family: $font-stack;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content-container {
+  display: block;
+  margin-top: $header-height;
+  padding: $content-padding;
+}

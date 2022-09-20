@@ -1,0 +1,12 @@
+@import "vars.scss";
+.van-tabbar{
+  background: $sylba-blue;
+}
+
+.van-tabbar-item {
+  color: white;
+  &--active {
+    color: $sylba-green;
+    background-color: $sylba-blue;
+  }
+}

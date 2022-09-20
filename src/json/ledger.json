@@ -1,0 +1,10 @@
+{
+  "tokens": {
+    "nftToken": "NSYLBAATEST02",
+    "transactionToken": "TSYLBAATEST02"
+  },
+  "accounts": {
+    "issuer": "r46PqjPtkk9HHpvLLg8FwZvE27Yj2wUEdu",
+    "custody": "rfJCSSAMJUtEiRGn9PiKzr3nkSPXtfbtxf"
+  }
+}
