@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-  <img src="../assets/logos/sylbaa.svg">
+  <img src="../assets/logos/ourchoice.webp">
 </div>
 </template>
 

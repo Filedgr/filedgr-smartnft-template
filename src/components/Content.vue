@@ -6,10 +6,31 @@
       <img src="../assets/logos/filedgr.svg"/>
       <p>The Smart NFT is powered by the Filedgr Network!</p>
     </div>
-    <van-tabbar route active-color="#94CDFF">
-      <van-tabbar-item replace to="/home" icon="home-o">Home</van-tabbar-item>
-      <van-tabbar-item replace to="/vr" icon="gem-o">3D</van-tabbar-item>
-      <van-tabbar-item replace to="/history" icon="todo-list-o">History</van-tabbar-item>
+    <van-tabbar route>
+      <van-tabbar-item replace to="/home">
+        <span>Home</span>
+        <template #icon>
+          <van-icon class-prefix="material-icons" name="home"></van-icon>
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/materials">
+        <span>Materials</span>
+        <template #icon>
+          <van-icon class-prefix="material-icons" name="certificate"></van-icon>
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/vr" icon="gem-o">
+        <span>3D</span>
+        <template #icon>
+          <van-icon class-prefix="material-icons" name="3d"></van-icon>
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/history" icon="todo-list-o">
+        <span>History</span>
+        <template #icon>
+          <van-icon class-prefix="material-icons" name="history"></van-icon>
+        </template>
+      </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -52,11 +73,13 @@ export default class Content extends Vue {
   display: flex;
   align-items: center;
   bottom: 55px;
+
   img {
     float: left;
     width: 5rem;
     margin: 0px 10px 0px 0px;
   }
+
   p {
     font-size: 8px;
   }

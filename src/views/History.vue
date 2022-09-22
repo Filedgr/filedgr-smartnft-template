@@ -1,6 +1,5 @@
 <template>
   <div class="content-container">
-
     <van-card v-for="tx in this.transactions"
               :key="tx.hash"
               :title="tx.title"
@@ -15,6 +14,9 @@
         </div>
         <div class="additional-content" v-if="tx.format === 'txt'">
           <MessageWrapper :file-url="tx.memo"></MessageWrapper>
+        </div>
+        <div class="additional-content" v-else-if="tx.format == 'image'">
+          <img v-bind:src="tx.memo">
         </div>
 
       </template>
@@ -69,7 +71,7 @@ export default class History extends Vue {
               amount: parseFloat(myAmount.value),
               memo: (typeof x.tx.Memos === 'undefined') ? 'No Memo' : fromHex(x.tx.Memos[0].Memo.MemoData!),
               format: (typeof x.tx.Memos === 'undefined') ? 'No Memo' : fromHex(x.tx.Memos[0].Memo.MemoFormat!),
-              thumb: (fromHex(x.tx?.Amount.currency) === this.nft) ? require('@/assets/images/nft.png') : require('@/assets/images/bg.webp')
+              thumb: (fromHex(x.tx?.Amount.currency) === this.nft) ? require('@/assets/images/sneaker-mesh.png') : require('@/assets/images/change.webp')
             })
           }
         }
@@ -83,7 +85,7 @@ export default class History extends Vue {
 @import "../assets/css/vars.scss";
 
 .van-card {
-  background: $sylba-green;
+  background: #f7f0edx;
 }
 
 .desc {
