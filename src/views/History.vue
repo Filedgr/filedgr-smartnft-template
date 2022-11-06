@@ -16,7 +16,7 @@
           <MessageWrapper :file-url="tx.memo"></MessageWrapper>
         </div>
         <div class="additional-content" v-else-if="tx.format == 'image'">
-          <img v-bind:src="tx.memo">
+          <va-image :src="tx.memo"/>
         </div>
 
       </template>
