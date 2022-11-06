@@ -1,4 +1,4 @@
-# filedgr-web-nft-blancpain
+# filedgr-smartnft-template
 
 ## Project setup
 ```
