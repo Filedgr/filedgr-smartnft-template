@@ -167,10 +167,4 @@ export default class ContentContainer extends Vue {
 @import "../assets/css/vars";
 @import "../assets/css/main";
 
-.content-container {
-  //display: block;
-  //padding: $content-padding;
-  //background-position: center;
-}
-
 </style>

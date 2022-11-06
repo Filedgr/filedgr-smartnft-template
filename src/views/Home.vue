@@ -1,13 +1,24 @@
 <template>
   <div class="content-container">
-    <img :src="this.image"/>
+    <img :src="this.image" style="max-width: 60%"/>
     <div class="desc">
-      <p>
-        Letting heirloom survive. NFT-Convert, for your emotional value to exist in the digital space,
-        while bringing back precious metals to circulation.<br><br>
-        No more bad feelings, no more waste of materials laying in the corner of your life.<br><br>
-        Congratulations on converting your jewel with ProcessID: <b>{{ this.processId }}</b>
-      </p>
+      <div class="bg-light-blue">
+        <img :src="this.nuggetImage"/>
+        <p class="bg-gray">
+          Mining gold results in poisoned waters,
+          landscapes and affects humankind and
+          animals in a destructive way. Not to
+          mention CO² Emissions, which are
+          above 20 times the amount resulting
+          from recycling gold.
+        </p>
+      </div>
+      <div class="bg-dark-blue">
+        <p>
+          <b>YOU JUST PLAYED PART TOWARDS MORE
+            SUSTAINABILITY!</b>
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -22,7 +33,8 @@ import { Image as VanImage } from 'vant'
   }
 })
 export default class Home extends Vue {
-  private image = require('@/assets/images/bg.webp')
+  private image = require('@/assets/images/nft02.png')
+  private nuggetImage = require('@/assets/images/nugget01.jpg')
   private processId = ''
 
   mounted () {
@@ -34,25 +46,11 @@ export default class Home extends Vue {
 <style scoped lang="scss">
 @import '../assets/css/vars.scss';
 
-.desc {
-  padding-top: 2rem;
-
-  p {
-    padding: .75rem;
-    background-color: $sylba-green;
-  }
-}
-
 .content-container {
-  display: block;
-  margin: $header-height auto auto;
-  padding: $content-padding;
-
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20rem;
   }
 }
 
