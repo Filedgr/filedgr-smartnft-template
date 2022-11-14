@@ -1,9 +1,12 @@
-function fromHex (hexString: string): string {
+function fromHex (hexString: string | undefined): string {
   let s = ''
-  for (let i = 0; i < hexString.length; i += 2) {
-    s += String.fromCharCode(parseInt(hexString.substr(i, 2), 16))
+  if (hexString !== undefined) {
+    for (let i = 0; i < hexString.length; i += 2) {
+      s += String.fromCharCode(parseInt(hexString.substr(i, 2), 16))
+    }
+    return decodeURIComponent(escape(s)).replace(/\0/g, '')
   }
-  return decodeURIComponent(escape(s)).replace(/\0/g, '')
+  return s
 }
 
 function toHex (str: string): string {
@@ -15,4 +18,14 @@ function toHex (str: string): string {
   }
   return h
 }
-export { fromHex, toHex }
+
+function stringToUint8Array (str: string | undefined): Uint8Array {
+  if (str !== undefined) {
+    const result = new TextEncoder().encode(str)
+    return result
+  }
+  const result = new Uint8Array()
+  return result
+}
+
+export { fromHex, toHex, stringToUint8Array }

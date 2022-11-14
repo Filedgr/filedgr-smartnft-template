@@ -1,10 +1,11 @@
 {
   "tokens": {
-    "nftToken": "NSYLBAATEST03",
-    "transactionToken": "TSYLBAATEST03"
+    "nftToken": "sYFmX8Lx",
+    "transactionToken": "t_c4HEe5rw_sYFmX8Lx",
+    "accessToken": "a_c4HEe5rw_sYFmX8Lx"
   },
   "accounts": {
-    "issuer": "r46PqjPtkk9HHpvLLg8FwZvE27Yj2wUEdu",
-    "custody": "rfJCSSAMJUtEiRGn9PiKzr3nkSPXtfbtxf"
+    "issuer": "rDkrmMZoAD9WqNmU2RMiSGaBNpKSuwuUuq",
+    "transaction": "rUwRpcYWNRo9DGfE284GyV9rDpXG9T95ig"
   }
 }

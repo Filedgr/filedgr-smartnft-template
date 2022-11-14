@@ -12,6 +12,7 @@
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
     "csv-parse": "^5.2.0",
+    "protobufjs": "^7.1.2",
     "vant": "^3.6.2",
     "vue": "^3.0.0",
     "vue-class-component": "^8.0.0-0",
@@ -23,7 +24,7 @@
     "vue3-timeline": "^1.2.3",
     "vuestic-ui": "^1.4.1",
     "vuex": "^4.0.0-0",
-    "xrpl": "^2.3.0"
+    "xrpl": "^2.5.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.18.0",

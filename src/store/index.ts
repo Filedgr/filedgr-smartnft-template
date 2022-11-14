@@ -10,7 +10,7 @@ export default createStore({
     },
     accountState: {
       issuer: accounts.issuer,
-      custody: accounts.custody
+      transaction: accounts.transaction
     },
     injectables: {
       processId: ids.processId
@@ -23,6 +23,3 @@ export default createStore({
   modules: {
   }
 })
-//
-// const store = createStore({})
-// export default store

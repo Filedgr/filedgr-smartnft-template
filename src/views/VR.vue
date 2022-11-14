@@ -63,6 +63,7 @@ export default class VR extends Vue {
   overflow: hidden;
   width: 100%;
   padding-top: 56.25%; /* 16:9 Aspect Ratio*/
+  border-radius: $border-radius;
 }
 
 .sketchfab-embed-wrapper iframe {

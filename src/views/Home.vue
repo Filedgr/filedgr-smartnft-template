@@ -5,12 +5,12 @@
       <div class="bg-light-blue">
         <img :src="this.nuggetImage"/>
         <p class="bg-gray">
-          Mining gold results in poisoned waters,
+          <b>Mining gold results in poisoned waters,
           landscapes and affects humankind and
           animals in a destructive way. Not to
           mention CO² Emissions, which are
           above 20 times the amount resulting
-          from recycling gold.
+            from recycling gold.</b>
         </p>
       </div>
       <div class="bg-dark-blue">
@@ -57,7 +57,6 @@ export default class Home extends Vue {
 .smartNFT {
   position: absolute;
   display: flex;
-  //justify-content: center;
   align-items: center;
   bottom: 55px;
 

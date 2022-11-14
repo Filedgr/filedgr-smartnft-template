@@ -18,11 +18,18 @@ html, body {
   padding: $content-container-padding;
 }
 
+@media only screen and (min-width: 1200px) {
+  .content-container {
+    margin-bottom: 60px;
+    display: block;
+    margin-top: $header-height;
+    padding: $content-container-padding;
+  }
+}
+
 .desc {
   padding-top: .75rem;
   img {
-    //float: left;
-    //margin: 15px px 10px 15px;
     max-width: 100%;
     border-radius: $border-radius;
   }

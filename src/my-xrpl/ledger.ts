@@ -2,6 +2,7 @@ import { AccountTxResponse, Client } from 'xrpl'
 
 interface MyTransaction {
   title: string
+  tokenId: string
   hash: string
   date: Date
   currency: string
@@ -27,7 +28,7 @@ class MyLedger {
   }
 
   async connect (): Promise<boolean> {
-    this.client = new this.xrpl.Client('wss://s.altnet.rippletest.net:51233')
+    this.client = new this.xrpl.Client('wss://s1.ripple.com/')
     await this.client?.connect()
     return true
   }
