@@ -14,17 +14,9 @@ html, body {
 
 .content-container {
   display: block;
-  margin-top: $header-height;
-  padding: $content-container-padding;
-}
-
-@media only screen and (min-width: 1200px) {
-  .content-container {
-    margin-bottom: 60px;
-    display: block;
-    margin-top: $header-height;
-    padding: $content-container-padding;
-  }
+  padding-top: $header-height + 1rem;
+  padding-left: $content-container-padding;
+  padding-right: $content-container-padding;
 }
 
 .desc {

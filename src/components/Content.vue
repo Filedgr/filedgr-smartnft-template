@@ -17,11 +17,9 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import Header from '@/components/Header.vue'
-import ContentContainer from '@/components/ContentContainer.vue'
 
 @Options({
   components: {
-    ContentContainer,
     Header
   }
 })
@@ -37,21 +35,23 @@ export default class Content extends Vue {
 .content {
   width: 60%;
   margin: auto;
-  padding: $content-padding;
+  padding-bottom: $bottom-padding;
 }
 
 @media only screen and (max-width: 600px) {
   .content {
     width: 100%;
-    margin: auto;
   }
 }
 
 .smartNFT {
+  width: 100%;
+  padding-left: $content-container-padding;
+  background: #FFFFFF;
   position: fixed;
   display: flex;
   align-items: center;
-  bottom: 55px;
+  bottom: 50px;
   img {
     float: left;
     width: 5rem;
@@ -61,5 +61,22 @@ export default class Content extends Vue {
     font-size: 8px;
   }
 }
+//
+//.smartNFT {
+//  position: absolute;
+//  display: flex;
+//  align-items: center;
+//  bottom: 55px;
+//
+//  img {
+//    float: left;
+//    width: 5rem;
+//    margin: 0px 10px 0px 0px;
+//  }
+//
+//  p {
+//    font-size: 8px;
+//  }
+//}
 
 </style>

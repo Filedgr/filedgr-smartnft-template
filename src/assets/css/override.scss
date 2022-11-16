@@ -10,3 +10,17 @@
     background-color: $sylba-blue;
   }
 }
+
+.van-image__image[style] {
+  object-fit: scale-down !important;
+}
+
+.van-card__title van-multi-ellipsis--l2 {
+  font-weight: 900;
+}
+
+:root {
+  --van-font-weight-bold: 900;
+}
+
+

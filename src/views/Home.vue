@@ -8,7 +8,7 @@
           <b>Mining gold results in poisoned waters,
           landscapes and affects humankind and
           animals in a destructive way. Not to
-          mention CO² Emissions, which are
+          mention CO² emissions, which are
           above 20 times the amount resulting
             from recycling gold.</b>
         </p>
@@ -51,23 +51,6 @@ export default class Home extends Vue {
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
-}
-
-.smartNFT {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  bottom: 55px;
-
-  img {
-    float: left;
-    width: 5rem;
-    margin: 0px 10px 0px 0px;
-  }
-
-  p {
-    font-size: 8px;
   }
 }
 </style>

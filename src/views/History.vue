@@ -140,10 +140,6 @@ export default class History extends Vue {
   }
 }
 
-.van-image__image[style] {
-  object-fit: scale-down !important;
-}
-
 .additional-content {
   padding: .25rem;
 }

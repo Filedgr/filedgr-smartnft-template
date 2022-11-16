@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-  <img src="../assets/logos/sylbaa.svg">
+  <img src="../assets/logos/sylbaa.logo.png">
 </div>
 </template>
 
@@ -16,15 +16,18 @@ export default class Header extends Vue {
 @import '../assets/css/vars.scss';
 
 .header {
+  z-index: 100;
   top: 0;
   position: fixed;
   background-color: $header-bg-color;
   height: $header-height;
   width: 100%;
   display: block;
-  padding: $content-padding;
+  padding: $header-logo-padding;
   img {
-    height: $logo-height;
+    //height: $logo-height;
+    height: 100%;
+    //padding-bottom: 0.1rem;
   }
 }
 </style>

@@ -12,19 +12,6 @@
       target="_blank" style="font-weight: bold; color: #1CAAD9;"> Filedgr </a> on <a
       href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=060c5abab80349408c4cbf56ec9943e8"
       target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
-<!--    <div class="desc">-->
-<!--    <van-card-->
-<!--      title="333 Gold"-->
-<!--      currency="€/g"-->
-<!--      price="17,92"-->
-<!--      :thumb="this.thumb">-->
-<!--      <template #desc>-->
-<!--        8ct Gold, which is often used as the basic material for jewellery, is a special alloy that takes advantage of-->
-<!--        the different qualities of gold and other metals. The basis of 333 gold is always 33.3% pure gold, which is-->
-<!--        where the name comes from.-->
-<!--      </template>-->
-<!--    </van-card>-->
-<!--  </div>-->
     <div class="desc">
       <div class="bg-light-blue">
         <img :src="this.nuggetImage"/>
@@ -41,10 +28,9 @@
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import ContentContainer from '@/components/ContentContainer.vue'
 
 @Options({
-  components: { ContentContainer }
+  components: { }
 })
 export default class VR extends Vue {
   private nuggetImage = require('@/assets/images/nugget02.jpg')
