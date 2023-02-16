@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import VR from '../views/VR.vue'
 import History from '@/views/History.vue'
+import NLux from '@/views/NLux.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -14,9 +14,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/vr',
-    name: 'VR',
-    component: VR
+    path: '/nlux',
+    name: 'NLux',
+    component: NLux
   },
   {
     path: '/history',

@@ -1,17 +1,23 @@
 <template>
   <div class="content-container">
-    <img :src="this.image" style="max-width: 60%"/>
     <div class="desc">
-      <div class="bg-light-blue">
-        <img :src="this.nuggetImage"/>
-        <p class="bg-gray">
-          <b>Mining gold results in poisoned waters,
-          landscapes and affects humankind and
-          animals in a destructive way. Not to
-          mention CO² emissions, which are
-          above 20 times the amount resulting
-            from recycling gold.</b>
-        </p>
+      <div v-if="measure >= 0" class="bg-light-blue">
+        <img :src="this.solarImage"/>
+        <div class="bg-gray">
+          <b>{{this.projectName}}</b><br><br>
+          <div class="align-icons"><span class="material-icons">energy_savings_leaf</span><span>Saving Target: {{this.savingTarget}} €</span></div><br>
+          <div class="align-icons"><span class="material-icons">update</span><span>Saving Period: {{this.period}} years</span></div><br>
+          <div class="align-icons"><span class="material-icons">percent</span><span>Deviation: +0.1%</span></div><br>
+        </div>
+      </div>
+      <div v-else-if="measure < 0" class="bg-red">
+        <img :src="this.solarImage"/>
+        <div class="bg-gray">
+          <b>{{this.projectName}}</b><br><br>
+          <div class="align-icons"><span class="material-icons">energy_savings_leaf</span><span>Saving Target: {{this.savingTarget}} €</span></div><br>
+          <div class="align-icons"><span class="material-icons">update</span><span>Saving Period: {{this.period}} years</span></div><br>
+          <div class="align-icons"><span class="material-icons">percent</span><span>Deviation: -4.0%</span></div><br>
+        </div>
       </div>
       <div class="bg-dark-blue">
         <p>
@@ -26,6 +32,7 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
 import { Image as VanImage } from 'vant'
+import { getProject } from '@/network/api/api'
 
 @Options({
   components: {
@@ -33,12 +40,24 @@ import { Image as VanImage } from 'vant'
   }
 })
 export default class Home extends Vue {
-  private image = require('@/assets/images/nft02.png')
-  private nuggetImage = require('@/assets/images/nugget01.jpg')
+  private solarImage = require('@/assets/images/solar-panel.jpeg')
   private processId = ''
+
+  private projectName = ''
+  private savingTarget = 0;
+  private period = 0;
+  private measure = 0;
 
   mounted () {
     this.processId = this.$store.state.injectables.processId
+    getProject().then(
+      res => {
+        this.projectName = res.data.name
+        this.period = res.data.period
+        this.savingTarget = res.data.savings_target
+        this.measure = res.data.measure
+      }
+    )
   }
 }
 </script>
@@ -52,5 +71,10 @@ export default class Home extends Vue {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+.align-icons {
+  display: flex;
+  align-items: center;
 }
 </style>

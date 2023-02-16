@@ -6,10 +6,21 @@
       <img src="../assets/logos/filedgr.svg"/>
       <p>The Smart NFT is powered by the Filedgr Network!</p>
     </div>
-    <van-tabbar route active-color="#94CDFF">
-      <van-tabbar-item replace to="/home" icon="home-o">Home</van-tabbar-item>
-      <van-tabbar-item replace to="/vr" icon="gem-o">3D</van-tabbar-item>
-      <van-tabbar-item replace to="/history" icon="todo-list-o">History</van-tabbar-item>
+    <van-tabbar route active-color="white">
+      <van-tabbar-item replace to="/home">
+        <span>Projects</span>
+        <template #icon>
+          <i class="material-icons">energy_savings_leaf</i>
+        </template>
+      </van-tabbar-item>
+      <van-tabbar-item replace to="/nlux" icon="gem-o">
+        <span>NLUX</span>
+        <template #icon>
+          <i class="material-icons">
+            lightbulb
+          </i>
+        </template>
+      </van-tabbar-item>
     </van-tabbar>
   </div>
 </template>
@@ -52,31 +63,16 @@ export default class Content extends Vue {
   display: flex;
   align-items: center;
   bottom: 50px;
+
   img {
     float: left;
     width: 5rem;
     margin: 0px 10px 0px 0px;
   }
+
   p {
     font-size: 8px;
   }
 }
-//
-//.smartNFT {
-//  position: absolute;
-//  display: flex;
-//  align-items: center;
-//  bottom: 55px;
-//
-//  img {
-//    float: left;
-//    width: 5rem;
-//    margin: 0px 10px 0px 0px;
-//  }
-//
-//  p {
-//    font-size: 8px;
-//  }
-//}
 
 </style>

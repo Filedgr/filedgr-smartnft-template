@@ -1,6 +1,6 @@
 <template>
 <div class="header">
-  <img src="../assets/logos/sylbaa.logo.png">
+  <img src="../assets/logos/guichet-logo-white.svg">
 </div>
 </template>
 
@@ -18,6 +18,7 @@ export default class Header extends Vue {
 .header {
   z-index: 100;
   top: 0;
+  left:0;
   position: fixed;
   background-color: $header-bg-color;
   height: $header-height;
@@ -25,9 +26,7 @@ export default class Header extends Vue {
   display: block;
   padding: $header-logo-padding;
   img {
-    //height: $logo-height;
     height: 100%;
-    //padding-bottom: 0.1rem;
   }
 }
 </style>

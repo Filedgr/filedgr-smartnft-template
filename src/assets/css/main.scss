@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import "vars.scss";
 
+.my-icon {
+  font-family: 'my-icon';
+}
+
+.my-icon-saving::before {
+  content: '\ec1a';
+}
+
 html, body {
   height: 100%;
   width: 100%;
@@ -29,7 +37,13 @@ html, body {
 
 .bg-light-blue {
   padding: .75rem;
-  background-color: $sylbaa-light-blue;
+  background-color: $guichet-green;
+  border-radius: $border-radius;
+}
+
+.bg-red {
+  padding: .75rem;
+  background-color: $guichet-red;
   border-radius: $border-radius;
 }
 
